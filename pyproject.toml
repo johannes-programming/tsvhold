@@ -17,7 +17,10 @@ classifiers = [
     "Programming Language :: Python :: 3 :: Only",
     "Typing :: Typed",
 ]
-dependencies = []
+dependencies = [
+    "datahold>=3.0,<4",
+    "setdoc>=1.3,<2",
+]
 description = "This project does superparsing."
 keywords = []
 license = "MIT"
@@ -27,7 +30,7 @@ license-files = [
 name = "tsvhold"
 readme = "README.rst"
 requires-python = ">=3.11"
-version = "0.0.0.dev0"
+version = "0.1.0"
 
 [project.urls]
 Download = "https://pypi.org/project/tsvhold/#files"

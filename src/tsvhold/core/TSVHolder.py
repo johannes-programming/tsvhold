@@ -1,7 +1,7 @@
 import csv
 import io
 from collections.abc import Iterable
-from typing import Any, Self, cast
+from typing import Any, Self
 
 import datahold
 import setdoc
@@ -13,7 +13,8 @@ def strtuple(iterable: Iterable[object], /) -> tuple[str, ...]:
     return tuple(map(str, iterable))
 
 
-class BaseTSVHolder(datahold.BaseHoldList[tuple[str, ...]]): ...
+class BaseTSVHolder(datahold.BaseHoldList[tuple[str, ...]]):
+    __slots__ = ()
 
 
 class TSVHolder(BaseTSVHolder, datahold.HoldList[Iterable[object]]):
